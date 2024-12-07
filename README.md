@@ -1,13 +1,19 @@
 # **Movie Data Analysis Project**
-![]()
+![](image2.jpg)
+
+
 ## **Introduction**  
-The movie industry thrives on data-driven decisions. This project explores a movie dataset sourced from Kaggle to understand patterns in movie performance and identify factors that influence success. SQL queries were extensively used to manipulate and analyze the data, showcasing practical expertise in database querying.  
+The movie industry thrives on data-driven decisions. This project explores a movie dataset sourced from Kaggle to understand patterns in movie performance and identify factors that influence success. This dataset consists of one table and 12 columns. SQL queries were extensively used to manipulate and analyze the data, showcasing practical expertise in database querying.  
 
 Through this analysis, we address key questions about movie genres, revenue trends, and the impact of release dates and directors. The aim is to provide actionable insights that stakeholders in the movie industry can use to make informed decisions.
+Here is the link to dataset: (https://drive.google.com/file/d/187gpdvovkd3XcEYEY18SbNWw2hh7p5YR/view?usp=sharing)
 
 ---
 
-## **Problem Statement**  
+## **What I am trying to solve?**  
+
+![](image6.png)
+
 The movie industry is competitive and dynamic, and producers face challenges in understanding:  
 1. The most popular and profitable genres.  
 2. The effect of release timing on movie success.  
@@ -43,9 +49,15 @@ To prepare the dataset for analysis, the following SQL queries were used:
    ```sql
    SELECT * FROM Movie_data;
    ```
+![](image3.png)
+
+![](image4.png)
+
 2. **Checking for Distinct Genres:**  
    ```sql
-   SELECT DISTINCT Genre AS Distinct_genre FROM Movie_data;
+   SELECT DISTINCT
+   Genre AS Distinct_genre
+   FROM Movie_data;
    ```
 3. **Filtering Movies by Genre:**  
    - Action Movies:  
