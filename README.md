@@ -59,6 +59,8 @@ To prepare the dataset for analysis, the following SQL queries were used:
    Genre AS Distinct_genre
    FROM Movie_data;
    ```
+   ![](image7.png)
+
 3. **Filtering Movies by Genre:**  
    - Action Movies:  
      ```sql
@@ -91,6 +93,19 @@ To prepare the dataset for analysis, the following SQL queries were used:
      SELECT Movie_title, Genre, Release_date FROM Movie_data 
      WHERE Genre = 'Action' AND Release_date = '2014-06-04';
      ```
+![](image8.png)
+
+7. **Filtering by Movie title and Release date**
+   ```sql
+   SELECT
+	movie_title,
+	Release_date
+   FROM
+	movie_data
+   WHERE
+	Release_date BETWEEN '2015-04-01' AND '2015-06-30';
+   ```
+![](image9.png)
 
 ---
 
@@ -104,6 +119,7 @@ The SQL queries were further used to group and summarize data for deeper insight
    GROUP BY Genre 
    ORDER BY Total_revenue_generated DESC;
    ```
+![](image10.png)
 
 2. **Director Analysis:**  
    - Movies with a Single Director:  
@@ -112,6 +128,7 @@ The SQL queries were further used to group and summarize data for deeper insight
      FROM Movie_data 
      WHERE Director_2 IS NULL;
      ```
+![](image11.png)
 
    - Movies with Multiple Directors:  
      ```sql
@@ -119,6 +136,7 @@ The SQL queries were further used to group and summarize data for deeper insight
      FROM Movie_data 
      WHERE Director_2 IS NOT NULL;
      ```
+![](image12.png)
 
 3. **Top Performers in Q2 2015:**  
    ```sql
@@ -127,6 +145,7 @@ The SQL queries were further used to group and summarize data for deeper insight
    WHERE Release_date BETWEEN '2015-04-01' AND '2015-06-30' 
    ORDER BY Revenue DESC;
    ```
+![](image13.png)
 
 4. **Movies with the Lowest Revenue:**  
    ```sql
@@ -134,34 +153,11 @@ The SQL queries were further used to group and summarize data for deeper insight
    FROM Movie_data 
    ORDER BY Revenue ASC;
    ```
+![](image14.png)
 
 ---
 
-## **Analysis**  
-From the analysis, the following insights were obtained:  
-1. **Genres:**  
-   Action and drama movies were the most frequent and profitable genres.  
-2. **Revenue Trends:**  
-   - Movies generating over $100 million dominated the dataset.  
-   - The second quarter of 2015 proved to be a high-revenue period.  
-3. **Director Contributions:**  
-   - Movies with single directors were more common, but those with multiple directors showed significant contributions.  
-4. **Release Timing:**  
-   - Movies released between April and June performed exceptionally well.
-
----
-
-## **Conclusion and Recommendations**  
 ### **Conclusion**  
-This project highlights the power of SQL in analyzing and interpreting movie data. Action and drama genres emerged as the most popular and profitable, while the second quarter of the year was identified as a strategic period for releasing movies. Directors also play a significant role, with both single and multiple-director movies contributing to the industry.  
-
-### **Recommendations**  
-1. **Focus on High-Performing Genres:** Studios should prioritize action and drama movies.  
-2. **Strategic Release Dates:** Plan movie releases between April and June to maximize revenue potential.  
-3. **Invest in Strong Directorial Teams:** Leverage the expertise of seasoned directors or director duos.  
-
 This project demonstrates proficiency in SQL and provides a framework for further analysis and decision-making in the movie industry. The SQL code included in this documentation highlights the technical skills applied in achieving the findings.  
 
 --- 
-
-This structured report with integrated code ensures your recruiter can see your SQL expertise while understanding the real-world implications of the analysis.
